@@ -1,0 +1,457 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5e8c7;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to right, #b91c1c, #7f1d1d);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-frame {
+    display: block;       /* Removes the "inline" gap at the bottom */
+    width: 100%;          /* Full width */
+    height: 140px;        /* Adjust this to ONLY fit your header text/logo */
+    border: none;         /* Removes default iframe border */
+    margin-bottom: 0;     /* Forces zero margin at the bottom */
+}
+
+.footer-frame { 
+	width: 100%;
+	height: 60px; 
+	border: none; 
+	overflow: hidden;
+}
+
+h1 { font-size: 2.8em; letter-spacing: 2px; }
+p { font-size: 1.2em; }
+
+/* NAVBAR */
+nav {
+    display: block;
+    margin-top: 0;        /* Snaps the nav to the bottom of the iframe */
+    background: rgba(15, 23, 42, 0.95);
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+nav ul li { margin: 0 10px; }
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+nav a:hover,
+nav a.active {
+    background: #e74c3c;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('home.webp') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.hero h2 { font-size: 3em; text-shadow: 3px 3px 10px rgba(0,0,0,0.8); }
+
+/* MAIN CONTENT */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.card:hover { transform: scale(1.05); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card h3 { padding: 15px; background: #c8102e; color: white; margin: 0; }
+.card p {
+    margin: 7px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 25px; /* space between rows */
+}
+
+table td {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Cafe Title */
+table h3 {
+    color: #c8102e;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* Images */
+table img {
+    display: block;
+    margin: 15px auto;
+    width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Branch list */
+table ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+table li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* LINKS AS BUTTONS */
+table a {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 6px 12px;
+    background: #c8102e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+table a:hover {
+    background: #e74c3c;
+}
+
+/* Hover effect for each cafe block */
+table td:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* ================= IMPROVED CAFE CARD STYLE ================= */
+.cafe-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom: 35px;
+    transition: all 0.3s ease;
+}
+
+.cafe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.cafe-card h3 {
+    color: #c8102e;
+    font-size: 2.1em;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #f5e8c7;
+}
+
+/* Cafe Box Layout */
+.cafe-box {
+    display: flex;
+    gap: 30px;
+align-items: flex-start;    flex-wrap: wrap;
+	
+}
+
+.cafe-image {
+    flex: 0 0 380px;
+    text-align: center;           /* Ensures buttons stay centered */
+}
+
+.cafe-image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+	margin-bottom: 10px;
+	
+}
+/* Buttons under image - Centered */
+.image-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* Content */
+.cafe-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Buttons */
+.links {
+    margin-bottom: 22px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: #c8102e;
+    color: white;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 1.05em;
+}
+
+.btn:hover {
+    background: #e74c3c;
+    transform: translateY(-2px);
+}
+
+/* Branch List */
+.branch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.branch {
+    font-size: 1.05em;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.branch b {
+    color: #2c3e50;
+}
+
+.branch a {
+    margin-left: 12px;
+    color: #c8102e;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.branch a:hover {
+    color: #e74c3c;
+}
+
+.mall-location {
+    font-size: 1.15em;
+    color: #2c3e50;
+    margin: 8px 0 15px 0;     /* Reduced bottom margin for closer buttons */
+    font-weight: 500;
+    justify-content: center;
+	
+}
+
+/* Red Title as Link - No underline */
+.club-name-link {
+    color: #c8102e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.club-name-link:hover {
+    color: #e74c3c;
+    text-decoration: none;     /* No line under it */
+}
+
+/* Menu Row */
+.menu-row {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 15px;
+}
+
+.menu-box {
+flex: 1;
+min-width: 200px;
+background: #f9f9f9;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+}
+
+.menu-box h5 {
+color: #c8102e;
+margin-bottom: 10px;
+}
+
+/* Section spacing */
+.cafe-content h4 {
+margin-top: 25px;
+margin-bottom: 10px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.6em;
+    color: #c8102e;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f5e8c7;
+}
+
+/* Space Between Sections */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Food Grid */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 20px;
+}
+
+.food-card {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.food-card p {
+    font-weight: bold;
+    color: #c8102e;
+}
+
+/* FORM */
+/* The box around the table */
+.contact-card {
+    background: #fff;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-top: 5px solid #a93226; /* Adds a nice orange accent top */
+}
+
+/* Label styling inside table cells */
+td label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+/* Modern Input Styles */
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+select, 
+textarea {
+    width: 90%; /* Standard width for table inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fdfdfd;
+}
+
+/* Button Styling */
+.btn-primary {
+    background: #a93226;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: #bdc3c7;
+    color: #333;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+input:hover { border-color: #a93226; }
+
+.action-buttons {
+    display: flex;
+    gap: 15px; /* Space between the Cafe and Restaurant buttons */
+    justify-content: center;
+	margin-top: 10px; /* Extra space specifically above the buttons */
+}
+
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+

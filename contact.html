@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunEgypt - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Compact Styling */
+        table { margin: 0 auto; border-spacing: 10px 5px; font-size: 0.9rem; }
+        input[type="text"], input[type="email"], input[type="number"], select { 
+            width: 140px; 
+            padding: 4px; 
+        }
+        textarea { width: 100%; height: 50px; box-sizing: border-box; }
+        .label-cell { font-weight: bold; text-align: right; color: #333; }
+    </style>
+</head>
+<body>
+    <header><h1>FunEgypt</h1><p>Get in Touch</p></header>
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cafes.html">Cafes</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="malls.html">Malls</a></li>
+        <li><a href="customize.html">Customize</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    </nav>
+
+    <main>
+    <div class="contact-card">
+        <h2 style="text-align:center;">Contact FunEgypt</h2>
+        <p style="text-align:center; color:#666; font-size:0.9rem; margin-bottom:20px;">
+            We'd love to hear from you!
+        </p>
+
+        <form action="mailto:sohilamnasr@gmail.com" method="post" enctype="text/plain">
+            <table border="0" width="100%" cellpadding="8">
+                <tr>
+                    <td width="15%"><label>Name:</label></td>
+                    <td width="35%"><input type="text" placeholder="Your Name" required></td>
+                    <td width="15%"><label>Email:</label></td>
+                    <td width="35%"><input type="email" placeholder="Email@site.com" required></td>
+                </tr>
+
+                <tr>
+                    <td><label>Age:</label></td>
+                    <td><input type="number" min="12" max="100" placeholder="Age" required></td>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" name="g" value="m" id="m" required> <label for="m">M</label>
+                        <input type="radio" name="g" value="f" id="f"> <label for="f">F</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>City:</label></td>
+                    <td>
+                        <select required>
+                            <option value="">Select City</option>
+                            <option>Cairo</option>
+                            <option>Giza</option>
+                            <option>Alexandria</option>
+                        </select>
+                    </td>
+                    <td><label>Interested:</label></td>
+                    <td>
+                        <input type="checkbox" id="c"> <label for="c">Cafes</label>
+                        <input type="checkbox" id="r"> <label for="r">Rest</label><br>
+						<input type="checkbox" id="r"> <label for="r">Malls</label>
+						<input type="checkbox" id="r"> <label for="r">Clubs</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Message:</label></td>
+                    <td colspan="3">
+                        <textarea rows="4" style="width:100%;" placeholder="How can we help?"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" align="center">
+                        <br>
+                        <input type="submit" value="Send Message" class="btn-primary">
+                        <input type="reset" value="Clear" class="btn-secondary">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</main>
+
+    <iframe src="footer.html" class="footer-frame" scrolling="no"></iframe>
+</body>
+</html>
